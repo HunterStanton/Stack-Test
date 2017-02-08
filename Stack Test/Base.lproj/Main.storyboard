@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stack_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,73 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zie-Rx-bNK">
+                                <rect key="frame" x="70.5" y="318.5" width="234" height="30"/>
+                                <state key="normal" title="Push Random Number Onto Stack">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="PushPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2df-Es-xYn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwr-wP-jf0">
+                                <rect key="frame" x="110" y="375.5" width="155" height="30"/>
+                                <state key="normal" title="Pop Number Off Stack">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="PopPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bgO-XY-F8p"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Nothing has been added to or from the Stack yet." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bbV-Zb-wkj">
+                                <rect key="frame" x="16" y="413.5" width="342.5" height="246.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5N7-tD-3SO">
+                                <rect key="frame" x="150" y="279.5" width="75" height="30"/>
+                                <state key="normal" title="Print Stack">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="PrintStackPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WFe-CP-ZaR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stack Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81d-FC-3hT">
+                                <rect key="frame" x="110.5" y="28" width="154" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="H52-e8-tqr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76725041949999995" green="0.76987206379999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="81d-FC-3hT" firstAttribute="centerX" secondItem="5N7-tD-3SO" secondAttribute="centerX" id="8Pf-bH-1Uw"/>
+                            <constraint firstItem="bbV-Zb-wkj" firstAttribute="top" secondItem="Jwr-wP-jf0" secondAttribute="bottom" constant="8" symbolic="YES" id="DLI-8R-4uH"/>
+                            <constraint firstItem="bbV-Zb-wkj" firstAttribute="centerX" secondItem="Jwr-wP-jf0" secondAttribute="centerX" id="FfG-3O-dAc"/>
+                            <constraint firstItem="Jwr-wP-jf0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HXU-fo-HFI"/>
+                            <constraint firstItem="zie-Rx-bNK" firstAttribute="top" secondItem="5N7-tD-3SO" secondAttribute="bottom" constant="9" id="RZz-S4-W72"/>
+                            <constraint firstItem="5N7-tD-3SO" firstAttribute="centerX" secondItem="Jwr-wP-jf0" secondAttribute="centerX" id="UzR-IH-uUQ"/>
+                            <constraint firstItem="81d-FC-3hT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Xx3-jq-4wi"/>
+                            <constraint firstItem="zie-Rx-bNK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YfG-wq-d2Z"/>
+                            <constraint firstItem="bbV-Zb-wkj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fAA-eA-9Zl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bbV-Zb-wkj" secondAttribute="bottom" constant="7" id="pQ4-jq-edH"/>
+                            <constraint firstItem="Jwr-wP-jf0" firstAttribute="top" secondItem="zie-Rx-bNK" secondAttribute="bottom" constant="27" id="q8b-l6-lOe"/>
+                            <constraint firstItem="zie-Rx-bNK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qvd-zW-5tq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="StackTextField" destination="bbV-Zb-wkj" id="tYd-ev-Ql0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.39130434782609" y="123.09782608695653"/>
         </scene>
     </scenes>
 </document>
