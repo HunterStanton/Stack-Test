@@ -39,7 +39,7 @@
                                     <action selector="PopPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bgO-XY-F8p"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Nothing has been added to or from the Stack yet." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bbV-Zb-wkj">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Nothing has been added to or from the Stack yet." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bbV-Zb-wkj">
                                 <rect key="frame" x="16" y="413.5" width="342.5" height="246.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>

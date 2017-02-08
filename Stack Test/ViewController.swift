@@ -28,26 +28,27 @@ class ViewController: UIViewController {
     
     @IBAction func PrintStackPressed(_ sender: Any)
     {
-        print(stack)
+        TextFieldHelper.AddLine(view: StackTextField, text: "\(stack)")
     }
 
     @IBAction func PushPressed(_ sender: Any)
     {
         let value: Int = Int(arc4random_uniform(2000))
         stack.push(value)
-        print("Pushed \(value) onto the stack.")
+        TextFieldHelper.AddLine(view: StackTextField, text: "Pushed \(value) onto the stack.")
     }
+    
     @IBAction func PopPressed(_ sender: Any)
     {
         if(stack.count == 0)
         {
-            print("There is nothing on the stack.")
+            TextFieldHelper.AddLine(view: StackTextField, text: "There is nothing on the stack.")
             return
         }
         else
         {
         let value: Int = stack.pop()!
-        print("Popped \(value) off the stack.")
+        TextFieldHelper.AddLine(view: StackTextField, text: "Popped \(value) off the stack.")
         }
     }
 }
