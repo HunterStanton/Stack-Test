@@ -1,5 +1,5 @@
 // A LIPO stack implementation
-// Gracefully taken from https://github.com/raywenderlich/swift-algorithm-club/blob/master/Stack/Stack.swift
+// Taken from https://github.com/raywenderlich/swift-algorithm-club/blob/master/Stack/Stack.swift
 // Copyright (c) 2016 Matthijs Hollemans and contributors
 /* Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
